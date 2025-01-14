@@ -1,4 +1,4 @@
-name: CI/CD
+name: CI/CD to Docker Hub
 
 on:
   push:
@@ -26,4 +26,4 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: your-dockerhub-username/mlops_demo:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/mlops_demo:latest
